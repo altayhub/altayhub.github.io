@@ -14,12 +14,18 @@ function Header() {
     <div>
       {/* <Img src={Logo} alt="react-boilerplate - Logo" /> */}
       <NavBar>
-        <HeaderLink to="/">
-          <FormattedMessage {...messages.home} />
+        <HeaderLink to="/market">
+          <FormattedMessage {...messages.market} />
         </HeaderLink>
-        <HeaderLink to="/features">
-          <FormattedMessage {...messages.features} />
+        <HeaderLink to="/invest">
+          <FormattedMessage {...messages.invest} />
         </HeaderLink>
+        <HeaderLink to="/relax">
+          <FormattedMessage {...messages.relax} />
+        </HeaderLink>
+        <HeaderLink to="/pereezd">
+          <FormattedMessage {...messages.relocation} />
+        </HeaderLink> 
         {/* 
         
         <HeaderLink to="/invest">
@@ -29,7 +35,7 @@ function Header() {
           <FormattedMessage {...messages.otdyh} />
         </HeaderLink> 
          <HeaderLink to="/market">
-          <FormattedMessage {...messages.marketplace} />
+          <FormattedMessage {...messages.market} />
         </HeaderLink>
         <HeaderLink to="/pereezd">
           <FormattedMessage {...messages.relocation} />

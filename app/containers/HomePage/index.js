@@ -72,8 +72,8 @@ export function HomePage({
       </Helmet>
       <div className="">
         <video id="background-video" loop autoPlay muted className="Video">
-          <source src="https://disk.yandex.ru/client/disk?source=domik-main&idApp=client&dialog=slider&idDialog=%2Fdisk%2F466495109.mp4" type="video/mp4" />
-          <source src="https://vod-progressive.akamaized.net/exp=1594042314~acl=%2A%2F466495109.mp4%2A~hmac=1ed61d9c68a5a80b844b380a751d10aec2b2533e577fa82117495a992d5d1321/vimeo-prod-skyfire-std-us/01/380/6/151902345/466495109.mp4?download=1&filename=Altay.mp4" type="video/ogg" />
+          <source src="https://github.com/altayhub/altayhub.github.io/blob/master/app/images/background.mp4?raw=true" type="video/mp4" />
+          <source src="https://github.com/altayhub/altayhub.github.io/blob/master/app/images/background.mp4?raw=true" type="video/ogg" />
                 Your browser does not support the video tag.
         </video>
 
@@ -89,7 +89,7 @@ export function HomePage({
             </p>
 
             <H2>
-              {/* <FormattedMessage {...messages.trymeHeader} /> */}
+              <FormattedMessage {...messages.trymeHeader} />
             </H2>
 
             {/* <Form onSubmit={onSubmitForm}>
