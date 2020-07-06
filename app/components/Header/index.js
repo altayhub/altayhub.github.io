@@ -7,13 +7,12 @@ import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
 import Banner from './banner.jpg';
 import messages from './messages';
+import Logo from './logo.png';
 
 function Header() {
   return (
     <div>
-      <A href="https://www.reactboilerplate.com/">
-        <Img src={Banner} alt="react-boilerplate - Logo" />
-      </A>
+      {/* <Img src={Logo} alt="react-boilerplate - Logo" /> */}
       <NavBar>
         <HeaderLink to="/">
           <FormattedMessage {...messages.home} />
@@ -21,6 +20,22 @@ function Header() {
         <HeaderLink to="/features">
           <FormattedMessage {...messages.features} />
         </HeaderLink>
+        {/* 
+        
+        <HeaderLink to="/invest">
+          <FormattedMessage {...messages.invest} />
+        </HeaderLink>
+        <HeaderLink to="/otdyh">
+          <FormattedMessage {...messages.otdyh} />
+        </HeaderLink> 
+         <HeaderLink to="/market">
+          <FormattedMessage {...messages.marketplace} />
+        </HeaderLink>
+        <HeaderLink to="/pereezd">
+          <FormattedMessage {...messages.relocation} />
+        </HeaderLink> 
+        
+        */}
       </NavBar>
     </div>
   );

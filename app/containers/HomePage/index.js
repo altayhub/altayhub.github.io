@@ -32,6 +32,9 @@ import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import Logo from './logo.png';
+import Img from './Img';
+import './HomePage.css'
 
 const key = 'home';
 
@@ -59,43 +62,56 @@ export function HomePage({
 
   return (
     <article>
+
       <Helmet>
-        <title>Home Page</title>
+        <title>AltayHub.com</title>
         <meta
           name="description"
-          content="A React.js Boilerplate application homepage"
+          content="About Altay Republic"
         />
       </Helmet>
-      <div>
-        <CenteredSection>
-          <H2>
-            <FormattedMessage {...messages.startProjectHeader} />
-          </H2>
-          <p>
-            <FormattedMessage {...messages.startProjectMessage} />
-          </p>
-        </CenteredSection>
-        <Section>
-          <H2>
-            <FormattedMessage {...messages.trymeHeader} />
-          </H2>
-          <Form onSubmit={onSubmitForm}>
-            <label htmlFor="username">
-              <FormattedMessage {...messages.trymeMessage} />
-              <AtPrefix>
-                <FormattedMessage {...messages.trymeAtPrefix} />
-              </AtPrefix>
-              <Input
-                id="username"
-                type="text"
-                placeholder="mxstbr"
-                value={username}
-                onChange={onChangeUsername}
-              />
-            </label>
-          </Form>
-          <ReposList {...reposListProps} />
-        </Section>
+      <div className="">
+        <video id="background-video" loop autoPlay muted className="Video">
+          <source src="https://disk.yandex.ru/client/disk?source=domik-main&idApp=client&dialog=slider&idDialog=%2Fdisk%2F466495109.mp4" type="video/mp4" />
+          <source src="https://vod-progressive.akamaized.net/exp=1594042314~acl=%2A%2F466495109.mp4%2A~hmac=1ed61d9c68a5a80b844b380a751d10aec2b2533e577fa82117495a992d5d1321/vimeo-prod-skyfire-std-us/01/380/6/151902345/466495109.mp4?download=1&filename=Altay.mp4" type="video/ogg" />
+                Your browser does not support the video tag.
+        </video>
+
+        <div className="Content">
+          <CenteredSection>
+            <Img src={Logo} alt="AltayHub" />
+
+            {/* <H2>
+              <FormattedMessage {...messages.startProjectHeader} />
+            </H2> */}
+            <p>
+              <FormattedMessage {...messages.startProjectMessage} />
+            </p>
+
+            <H2>
+              {/* <FormattedMessage {...messages.trymeHeader} /> */}
+            </H2>
+
+            {/* <Form onSubmit={onSubmitForm}>
+             <H2> <label htmlFor="username">
+                <FormattedMessage {...messages.trymeMessage} />
+                <AtPrefix>
+                  <FormattedMessage {...messages.trymeAtPrefix} />
+                </AtPrefix>
+                <Input
+                  id="username"
+                  type="text"
+                  placeholder="mxstbr"
+                  value={username}
+                  onChange={onChangeUsername}
+                  style={{color:'white'}}
+                />
+              </label></H2>
+            </Form>
+            <ReposList {...reposListProps} /> */}
+          </CenteredSection>
+        </div>
+
       </div>
     </article>
   );
